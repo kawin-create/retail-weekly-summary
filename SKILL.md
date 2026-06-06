@@ -88,14 +88,11 @@ Save the output HTML to the workspace outputs folder.
 
 ### Step 6: Publish to GitHub Pages
 
-After generating the HTML, auto-publish it to the GitHub Pages dashboard:
+After generating the HTML, auto-publish it to the GitHub Pages dashboard. Follow the [github-pages-dashboard](../github-pages-dashboard/SKILL.md) skill for the full workflow. In short:
 
 ```bash
-# Copy HTML to dashboard repo
 DASHBOARD_DIR="$HOME/.qoderwork/workspace/retail-dashboard"
 cp "<output_html_path>" "$DASHBOARD_DIR/index.html"
-
-# Commit and push
 cd "$DASHBOARD_DIR"
 git add index.html
 git commit -m "Update dashboard: Week {{W21}}-{{W22}}"
@@ -104,7 +101,7 @@ git push origin main
 
 The dashboard will be live at: **https://kawin-create.github.io/retail-performance-dashboard/**
 
-Note: The dashboard repo is at `~/.qoderwork/workspace/retail-dashboard/`. If it doesn't exist locally, clone it first:
+If the local dashboard repo doesn't exist, clone it first:
 ```bash
 gh repo clone kawin-create/retail-performance-dashboard ~/.qoderwork/workspace/retail-dashboard
 ```
